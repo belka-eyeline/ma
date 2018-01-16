@@ -1,4 +1,4 @@
-# ma
+# miniApps
 ## Contents
 1. Documentation
 2. Examples
