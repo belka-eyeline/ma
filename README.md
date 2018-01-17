@@ -2,15 +2,15 @@
 ## Contents
 1. Documentation
 2. Examples
-2.1 Bots
-- Крестики-нолики
-- Тестовые боты для проверки шаблонов
-- Community bot ICO MiniApps
-- Community bot mamalara.ru
-- FAQ bot
-- Examples USSD-service SADS
-- Smart bots examples
-- Примеры с опросами и тестами
+- Bots
+-- Крестики-нолики
+-- Тестовые боты для проверки шаблонов
+-- Community bot ICO MiniApps
+-- Community bot mamalara.ru
+-- FAQ bot
+-- Examples USSD-service SADS
+-- Smart bots examples
+-- Примеры с опросами и тестами
 2.2 Tests
 2.3 XML
 3. Templates
