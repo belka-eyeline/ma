@@ -32,7 +32,7 @@
 короткие ссылки делаются так: [pygeoip](https://github.com/appliedsec/pygeoip),
 код можно выделить (преформатирование):  `sudo apt-get install python-crypto python-dpkt python-ipy python-pypcap`
 картинки: 
-<img width=150 src="http://f.mypage.ru/43ce45480aff744158d018da54b85f4c_07803f3ca2ceb64dd45f37646939c57c.jpg"/>
+<img width=300 src="https://github.com/honcheng/PaperFold-for-iOS/raw/master/Screenshots/verticalfold.gif"/>
 **bold** *Italic* 
 ## 2. Examples
 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст 
