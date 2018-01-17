@@ -30,10 +30,10 @@
 - текст
 ссылки подхватывает сам: www.ma.net. 
 короткие ссылки делаются так: [pygeoip](https://github.com/appliedsec/pygeoip),
-код можно выделить (преформатирование):  `sudo apt-get install python-crypto python-dpkt python-ipy python-pypcap`
 после картинки: 
 <img width=300 src="https://github.com/honcheng/PaperFold-for-iOS/raw/master/Screenshots/verticalfold.gif"/>
 text
+код можно выделить (преформатирование):  `sudo apt-get install python-crypto python-dpkt python-ipy python-pypcap`
 **bold** *Italic* 
 ## 2. Examples
 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст 
