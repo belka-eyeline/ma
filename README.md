@@ -41,17 +41,8 @@
 код можно выделить (преформатирование):  `sudo apt-get install python-crypto python-dpkt python-ipy python-pypcap`
 картинки: 
 <img src="https://github.com/honcheng/RTLabel/raw/master/screenshot.png"/>
-<b>Bold</b>
-	<i>Italic</i>
-	<bi>Bold & Italic</bi>
-	<u>underline</u>, <u color=red>underline with color</u>
-	<a href='http://..'>link</a>
-	<uu>double underline</uu> , <uu color='#ccff00'>double underline with color</uu>
-	<font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00'>custom font</font>
-	<font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00' stroke=1>custom font with strokes</font>
-	<font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00' kern=35>custom font with kerning</font>
-	<p align=justify>alignment</p>
-	<p indent=20>indentation</p>
+<b>Bold</b> 	<i>Italic</i> <a href='http://..'>link</a>
+<p>с новой строки</p>
 ## 2. Examples
 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст 
 ### Крестики-нолики
