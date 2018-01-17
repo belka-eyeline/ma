@@ -2,32 +2,35 @@
 ## Contents
 1. Documentation
 2. Examples
+2.1 Bots
 - Крестики-нолики
 - Тестовые боты для проверки шаблонов
-- Групповой бот ICO MiniApps
+- Community bot ICO MiniApps
 - Community bot mamalara.ru
 - FAQ bot
-- Примеры USSD-сервисов на SADS
+- Examples USSD-service SADS
 - Smart bots examples
 - Примеры с опросами и тестами
+2.2 Tests
+2.3 XML
 3. Templates
-* Verification MSISDN 
-* TiPay plugin
-* CCC plugin
-* Bitrix24 plugin
-* VK plugin
-* Google calendar plugin
-* Sender plugin
-* API.AI helper
-* MS QNA helper
+- Verification MSISDN 
+- TiPay plugin
+- CCC plugin
+- Bitrix24 plugin
+- VK plugin
+- Google calendar plugin
+- Sender plugin
+- API.AI helper
+- MS QNA helper
 4. Tools
-* STT
-* AI plugins
-* Personalization2
-* SAA 2.0
-* IPS
-* ALS
-* Libs
+- STT
+- AI plugins
+- Personalization 2
+- SAA 2.0
+- IPS
+- ALS
+- Libs
 ## 1. Documentation
 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст:
 - текст
@@ -36,6 +39,19 @@
 ссылки подхватывает сам: www.ma.net. 
 короткие ссылки делаются так: [pygeoip](https://github.com/appliedsec/pygeoip),
 код можно выделить (преформатирование):  `sudo apt-get install python-crypto python-dpkt python-ipy python-pypcap`
+картинки: 
+<img src="https://github.com/honcheng/RTLabel/raw/master/screenshot.png"/>
+<b>Bold</b>
+	<i>Italic</i>
+	<bi>Bold & Italic</bi>
+	<u>underline</u>, <u color=red>underline with color</u>
+	<a href='http://..'>link</a>
+	<uu>double underline</uu> , <uu color='#ccff00'>double underline with color</uu>
+	<font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00'>custom font</font>
+	<font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00' stroke=1>custom font with strokes</font>
+	<font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00' kern=35>custom font with kerning</font>
+	<p align=justify>alignment</p>
+	<p indent=20>indentation</p>
 ## 2. Examples
 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст 
 ### Крестики-нолики
