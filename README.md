@@ -2,17 +2,9 @@
 ## Contents
 1. Documentation
 2. Examples
-<p>2.1. Bots</p>
-- Крестики-нолики
-- Тестовые боты для проверки шаблонов
-- Community bot ICO MiniApps
-- Community bot mamalara.ru
-- FAQ bot
-- Examples USSD-service SADS
-- Smart bots examples
-- Примеры с опросами и тестами
-<p>2.2 Tests</p>
-<p>2.3 XML</p>
+- Bots
+- Tests
+- XML
 3. Templates
 - Verification MSISDN 
 - TiPay plugin
