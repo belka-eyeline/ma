@@ -1,0 +1,26 @@
+<ivy-module version="2.0">
+  <info organisation="mobi.eyeline.utils" module="rest-utils"/>
+  <dependencies>
+
+    <dependency org="com.google.guava" name="guava" rev="19.0" transitive="false"/>
+    <dependency org="org.apache.commons" name="commons-lang3" rev="3.4" transitive="false"/>
+
+    <dependency org="log4j" name="log4j" rev="1.2.16" transitive="false"/>
+    <dependency org="javax.servlet" name="servlet-api" rev="2.5"/>
+
+    <!-- Jersey 2.16 (JAX-RS 2.0 impl) -->
+    <dependency org="org.glassfish.jersey.containers" name="jersey-container-servlet" rev="2.6" conf="*->default"/>
+
+    <dependency org="javax.ws.rs" name="javax.ws.rs-api" rev="2.0.1"/>
+
+    <!-- Jackson as a JSON provider for Jersey -->
+    <dependency org="org.glassfish.jersey.media" name="jersey-media-json-jackson" rev="2.6" conf="*->default"/>
+    <dependency org="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-json-provider" rev="2.6.7"/>
+
+    <!-- 2.6.7 is the last version compatible with JDK 1.6 -->
+    <dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.6.7" transitive="false"/>
+    <dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.6.7" transitive="false"/>
+    <dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.6.7" transitive="false"/>
+
+  </dependencies>
+</ivy-module>

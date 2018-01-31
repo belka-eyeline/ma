@@ -8,7 +8,7 @@
 3. Templates
 - Verification MSISDN 
 - TiPay plugin
-- CCC plugin
+- CCC plugin (Chat call-center)
 - Bitrix24 plugin
 - VK plugin
 - Google calendar plugin

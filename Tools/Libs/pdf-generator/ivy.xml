@@ -1,0 +1,55 @@
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd"
+            xmlns:m="http://ant.apache.org/ivy/maven.xsd">
+
+  <info organisation="mobi.eyeline.utils" module="pdf-generator"/>
+
+  <configurations>
+    <conf name="runtime"/>
+    <conf name="test" extends="runtime"/>
+  </configurations>
+
+  <dependencies>
+
+    <!--
+        Runtime dependencies.
+    -->
+
+    <dependency org="org.codehaus.groovy" name="groovy-all" rev="2.4.5" conf="runtime->default">
+      <artifact name="groovy-all" type="jar" ext="jar" m:classifier="" conf="runtime->default"/>
+      <exclude org="javax.servlet" name="servlet-api"/>
+    </dependency>
+
+    <dependency org="org.freemarker" name="freemarker" rev="2.3.23" conf="runtime->default"/>
+    <dependency org="org.apache.xmlgraphics" name="fop" rev="1.0" conf="runtime->default">
+      <exclude org="org.apache.xmlgraphics" name="batik-svg-dom"/>
+      <exclude org="org.apache.xmlgraphics" name="batik-anim"/>
+      <exclude org="org.apache.xmlgraphics" name="batik-bridge"/>
+      <exclude org="org.apache.xmlgraphics" name="batik-script"/>
+      <exclude org="org.apache.xmlgraphics" name="batik-gvt"/>
+    </dependency>
+
+    <dependency org="net.sf.cssbox" name="cssbox" rev="4.12" conf="runtime->default"/>
+    <dependency org="net.sf.jtidy" name="jtidy" rev="r938" conf="runtime->default"/>
+
+    <dependency org="org.apache.pdfbox" name="pdfbox" rev="2.0.3" conf="runtime->default"/>
+
+    <dependency org="log4j" name="log4j" rev="1.2.17" conf="runtime->default">
+      <exclude org="org.apache.geronimo.specs"/>
+    </dependency>
+
+
+    <!--
+        Test dependencies.
+    -->
+
+    <dependency org="org.jacoco" name="org.jacoco.ant" rev="0.7.7.201606060606" conf="test->default"/>
+    <dependency org="junit" name="junit" rev="4.12" conf="test->default"/>
+    <dependency org="org.hamcrest" name="hamcrest-all" rev="1.3" conf="test->default"/>
+
+    <dependency org="org.apache.ant" name="ant" rev="1.9.7" conf="test->default"/>
+    <dependency org="org.apache.ant" name="ant-junit4" rev="1.9.7" conf="test->default"/>
+    <dependency org="org.apache.ant" name="ant-junit" rev="1.9.7" conf="test->default"/>
+
+  </dependencies>
+</ivy-module>

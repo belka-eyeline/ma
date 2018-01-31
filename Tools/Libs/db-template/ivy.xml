@@ -1,0 +1,20 @@
+<ivy-module version="2.0">
+  <info organisation="mobi.eyeline.utils" module="db-template"/>
+
+  <dependencies>
+    
+    <dependency org="org.hibernate" name="hibernate-core" rev="5.1.0.Final" conf="*->default"/>
+    <dependency org="org.hibernate" name="hibernate-validator" rev="5.2.4.Final" conf="*->default"/>
+    <dependency org="org.hibernate" name="hibernate-c3p0" rev="5.1.0.Final" conf="*->default"/>
+    <dependency org="com.mchange" name="c3p0" rev="0.9.5.2" conf="*->default"/>
+
+    <dependency org="mysql" name="mysql-connector-java" rev="5.1.13"/>
+
+    <dependency org="org.glassfish.web" name="javax.el" rev="2.2.4"/>
+
+    <dependency org="mobi.eyeline.utils" name="general_utils2" rev="[0.1,)" conf="*->default"/>
+
+    <exclude org="org.apache.openejb" module="javaee-api"/>
+    <exclude org="javaee" module="javaee-api"/>
+  </dependencies>
+</ivy-module>

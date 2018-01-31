@@ -1,0 +1,35 @@
+plugins {
+  id 'java'
+  id 'com.github.johnrengelman.shadow' version '2.0.1'
+  id 'ivy-publish'
+}
+
+sourceCompatibility = 1.8
+
+ext {
+  tomcatVersion = '8.5.6'
+}
+
+dependencies {
+  compile project(':rsm-core')
+
+  compileOnly group: 'org.apache.tomcat', name: 'tomcat-catalina', version: tomcatVersion
+  compileOnly group: 'org.apache.tomcat', name: 'tomcat-coyote', version: tomcatVersion
+}
+
+shadowJar {
+  relocate 'redis.clients', 'shadow.redis.clients'
+  relocate 'org.msgpack', 'shadow.org.msgpack'
+  relocate 'org.apache.commons.pool2', 'shadow.org.apache.commons.pool2'  // Jedis dependency.
+}
+
+publishing {
+  publications {
+    ivy(IvyPublication) {
+      artifact shadowJar
+    }
+  }
+  repositories {
+    add project.repositories.ivyRelease
+  }
+}

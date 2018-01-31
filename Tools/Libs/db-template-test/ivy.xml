@@ -1,0 +1,27 @@
+<ivy-module version="2.0">
+  <info organisation="mobi.eyeline.utils" module="db-template-test"/>
+
+  <publications>
+    <artifact type="jar" ext="jar" name="db-template-test"/>
+    <artifact type="source" ext="jar" name="db-template-test-sources"/>
+  </publications>
+
+  <dependencies>
+    <dependency org="mobi.eyeline.utils" name="db-template" changing="true" rev="[0.04,)"/>
+
+    <dependency org="log4j" name="log4j" rev="1.2.16"/>
+    <dependency org="junit" name="junit" rev="4.10"/>
+
+    <dependency org="mysql" name="mysql-connector-mxj" rev="5.0.12"/>
+    <dependency org="org.liquibase" name="liquibase-core" rev="3.4.2">
+      <exclude name="ejb"/>
+      <exclude name="jsf-api"/>
+    </dependency>
+    <dependency org="xerces" name="xercesImpl" rev="2.8.1"/>
+
+    <!--<exclude name="javaee-api"/>-->
+    <exclude org="org.apache.openejb" module="javaee-api"/>
+    <exclude org="javaee" module="javaee-api"/>
+
+  </dependencies>
+</ivy-module>
