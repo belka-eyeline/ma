@@ -1,3 +1,5 @@
+#MSISDN confirmation test bot
+
 Бот на русском языке.
 Пример использования Verification by MSISDN plugin. Цель бота получить от пользователя подтвержденный номер телефона.
 
