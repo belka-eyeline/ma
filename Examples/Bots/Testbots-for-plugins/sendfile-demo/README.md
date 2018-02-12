@@ -1,4 +1,4 @@
-#Sendfile demo bot
+# Sendfile demo bot
 
 Бот на русском языке. Бот представляет собой пример использования sender plugin.
 

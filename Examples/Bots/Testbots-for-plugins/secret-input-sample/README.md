@@ -1,4 +1,4 @@
-#Secret input sample bat
+# Secret input sample bat
 
 Пример использования secret input plugin. Бот на русском языке. 
 

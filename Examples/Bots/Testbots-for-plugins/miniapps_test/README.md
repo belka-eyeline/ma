@@ -1,4 +1,4 @@
-#Miniapps test bot
+# Miniapps test bot
 
 (Леша, тут кусочки по msisdn confirmation, secret input, send file повторяются)
 
