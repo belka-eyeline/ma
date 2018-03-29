@@ -9,7 +9,8 @@ The goal is to transfer the user's request to a trained API.ai bot to continue d
 ## Use
 
 The plugin is called via a link that is similar to "http://plugins.miniapps.run/ai_apiai?....". For instance:
-```<page version="2.0">
+```html
+<page version="2.0">
   <div>
     Thank you for using our service!
   </div>
@@ -19,7 +20,8 @@ The plugin is called via a link that is similar to "http://plugins.miniapps.run/
       To first page
     </link>
   </navigation>
-</page>```
+</page>
+```
 
 ## Parameters
 | Parametr      | Mandatory       | Value |
