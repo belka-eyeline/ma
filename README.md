@@ -68,6 +68,7 @@ Content/service provider's system notifies the user by calling push method in Mo
 Example:
 
 *HTTP GET*
+
 ```http://prod.globalussd.mobi/push?scenario=push&protocol=telegram&service=syntez.azs&user_id=6c0ed82b-f793-41cf-9114-cbaaf3e1fb16&message=<%=URLEncoder.encode("Payment €38.20, Regular", "UTF-8")%>```
 
 The parameters are described in the table below.
