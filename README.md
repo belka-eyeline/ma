@@ -3,14 +3,14 @@
 Sometimes users want to buy content or services online. TiPay plugin facilitates incorporation of payment mechanisms into services. The plugin conceals from the service developer a whole lot of routine procedures of JSON TiPay API low-level interworking as well as user registration and setting a payment PIN. From the service developer's perspective the process of payment consists of the following steps, when TiPay is in use:
 
 1.[The service composes a payment link](#composition-of-payment-link) containing the purchase details, using which the user starts the payment process. The link can be associated with a menu item, or a button, when Telegram, Viber, or Facebook messengers are used.
-2.The service receives a notification of the start of payment transaction meaning that the amount declared in the order is now reserved on the user's account/card. The service developer provides a URL where such notifications should be sent to. The URL should be accessible from TiPay Platform. It is specified in the payment link (see Step 1). If transaction fails, the same URL receives an error notification.
-3. The user is notified of of the start of payment transaction and the appropriate amount is reserved. Usually service developers prefer to decide how such notification should be presented to the user and what form of wording is to be used. Therefore, TiPay Platform does not notify users independently, but leaves this job to service developers. Notifications are sent by means of Mobilizer Push API.
-4. The service requests payment status. It may be needed if for some reason the service has not received the notification of the start of payment transaction (see Step 2). The service then requests the transaction status using service order ID.
-5. Transaction confirmation. After the purchase is completed its final amount (that can be less than that initially declared) becomes known. To finalise the transaction the service should notify the platform by sending a direct HTTP request to the plugin containing the transaction ID and the ultimate amount.
-6. Transaction rollback. If for some reason the services needs to cancel the transaction, it should make the rollback call.
-7. The service is notified of transaction completion. This notification is sent to the URL set in the payment link (see Step 1). If the transaction fails, the failure notification will be sent to the same URL.
-8. The user is notified of payment completion. Again, the service developer takes the job of notifying users, like at the Step 3.
-9. Getting user information. This option is to check if any cards are bound to the user's account and to get the user's email address.
+2.[The service receives a notification of the start of payment transaction](#service-is-notified-about-start-of-payment-transaction) meaning that the amount declared in the order is now reserved on the user's account/card. The service developer provides a URL where such notifications should be sent to. The URL should be accessible from TiPay Platform. It is specified in the payment link (see Step 1). If transaction fails, the same URL receives an error notification.
+3. [The user is notified of of the start of payment transaction](#user-is-notified-about-start-of-payment-transaction) and the appropriate amount is reserved. Usually service developers prefer to decide how such notification should be presented to the user and what form of wording is to be used. Therefore, TiPay Platform does not notify users independently, but leaves this job to service developers. Notifications are sent by means of Mobilizer Push API.
+4. [The service requests payment status](#service-requests-payment-status). It may be needed if for some reason the service has not received the notification of the start of payment transaction (see Step 2). The service then requests the transaction status using service order ID.
+5. [Transaction confirmation](#transaction-confirmation). After the purchase is completed its final amount (that can be less than that initially declared) becomes known. To finalise the transaction the service should notify the platform by sending a direct HTTP request to the plugin containing the transaction ID and the ultimate amount.
+6. [Transaction rollback](#transaction-rollback). If for some reason the services needs to cancel the transaction, it should make the rollback call.
+7. [The service is notified of transaction completion](#the-service-is-notified-of-transaction-completion). This notification is sent to the URL set in the payment link (see Step 1). If the transaction fails, the failure notification will be sent to the same URL.
+8. [The user is notified of payment completion](#the-user-is-notified-of-payment-completion). Again, the service developer takes the job of notifying users, like at the Step 3.
+9. [Getting user information](#getting-user-information). This option is to check if any cards are bound to the user's account and to get the user's email address.
 
 
 ## General Interworking Scenario
@@ -26,7 +26,7 @@ _http://plugins.miniapps.run/tipay?order.id=<>&order.name=<>&order.amount=<>&rec
 and comprises parameters indicated in the table below.
 
 Name 		|Description 									|Type		|Mandatory
------------------------------------------------------------------------------------------------------------------------------
+----------------|-------------------------------------------------------------------------------|---------------|--------------
 order.id	|Unique order identifier generated by the content/service provider's system.	|String		|Yes
 order.name	|Order name. It can contain brief description of the order.			|String		|Yes
 order.amount	|Amount due.									|Decimal	|Yes
@@ -56,7 +56,7 @@ receipt.url	|Notification URL (described above).						|URL		|Yes
 
 After the user initiates the payment transaction a notification of transaction start is sent to receipt.url specified by the service at the previous step. It comprises parameters indicated in the table below.
 Name		|Description							|Type
-------------------------------------------------------------------------------------------------------------------
+----------------|---------------------------------------------------------------|-----------------------------------
 order.id	|Unique order identifier inserted by the content/service provider's system in the payment link.										|String
 payment.id	|Transaction identifier generated by TiPay. It will be required when finishing the transaction.									|String
 status		|Initial transaction status. If the necessary amount was successfully blocked on the user's card, the status "HOLD" is returned. Otherwise "FAILED" is returned.									|String
@@ -71,7 +71,7 @@ http://prod.globalussd.mobi/push?scenario=push&protocol=telegram&service=syntez.
 
 The parameters are described in the table below.
 Name		|Description											|Type			|Example
----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------|-----------------------------------------------------------------------------------------------|-----------------------|------------
 scenario	|It should take the value push.									|-			|push
 protocol	|The name of the messenger used to communicate with the user.					|String			|telegram/viber/vk/facebook
 service		|Service ID in the [Miniapps](http://www.miniapps.pro/) platform.				|String			|BP.ps
@@ -86,14 +86,14 @@ _https://api.tipay.ru/tipay/get_payment?service=<>&order.id=<>_
 
 The parameters are described in the table below.
 Name		|Description										|Type	|Mandatory
----------------------------------------------------------------------------------------------------------------------------
+----------------|---------------------------------------------------------------------------------------|-------|-------------
 payment.id	|Transaction identifier generated by TiPay and received at Step 2.			|String	|No
 service		|Service identifier. Only mandatory in the absence of payment.id.			|String	|No
 order.id	|Order identifier generated by the service. Only mandatory in the absence of payment.id	|String	|No
 
 TiPay answers with JSON object with fields specified in the following table. In the case of request failure the answer contains the field "error".
-Name	|Description							|Type	|Mandatory
-----------------------------------------------------------------------------------------------
+Name		|Description						|Type	|Mandatory
+----------------|-------------------------------------------------------|-------|----------------
 paymentId	|TiPay transaction ID.					|String	|No
 status		|Transaction status					|String	|No
 error		|Error text appearing in the case of request failure.	|String	|No
@@ -106,7 +106,7 @@ _https://api.tipay.ru/tipay/commit?payment.id=<>&order.amount=<>_
 
 The parameters are described in the table below.
 Name		|Description									|Type		|Mandatory
-----------------------------------------------------------------------------------------------------------------------------
+----------------|-------------------------------------------------------------------------------|---------------|-------------
 payment.id	|Transaction identifier generated by TiPay and received at Step 2.		|String		|Yes
 order.amount	|The final amount of the purchase. It can be less than initially stated.	|Decimal	|Yes
 
@@ -118,12 +118,12 @@ _https://api.tipay.ru/tipay/rollback?payment.id=<>_
 
 The parameters are described in the table below.
 Name		|Description									|Type	|Mandatory
------------------------------------------------------------------------------------------------------------------------
+----------------|-------------------------------------------------------------------------------|-------|-----------------
 payment.id	|Transaction identifier generated by TiPay and received at Step 2 or at Step 4.	|String	|Yes
 
 TiPay answers with JSON object with fields specified in the following table. In the case of failure the answer contains the field "error".
 Name		|Description						|Type	|Mandatory
---------------------------------------------------------------------------------------------------
+----------------|-------------------------------------------------------|-------|--------------------
 paymentId	|TiPay transaction ID.					|String	|No
 status		|Transaction Status.					|String	|No
 error		|Error text appearing in the case of request failure.	|String	|No
@@ -132,7 +132,7 @@ error		|Error text appearing in the case of request failure.	|String	|No
 
 When the transaction closes a notification about it is sent to the address receipt.url specified in the payment link. It comprises parameters described in the table below.
 Name		|Description													|Type
---------------------------------------------------------------------------------------------------------------------------------------------
+----------------|---------------------------------------------------------------------------------------------------------------|-------------
 order.id	|Unique order identifier inserted by the content/service provider's system in the payment link.			|String
 payment.id	|TiPay transaction ID.												|String
 status		|Transaction completion status. In case of success the parameter takes the value "PAID", otherwise "FAILED"	|String
@@ -149,12 +149,12 @@ _https://api.tipay.ru/tipay/user_info?subscriber=<>_
 
 The user's MSISDN is sent a parameter.
 Name		|Description			|Type	|Mandatory
--------------------------------------------------------------------------
+----------------|-------------------------------|-------|-------------------
 subscriber	|User's MSISDN in TiPay.	|String	|Yes
 
 TiPay answers with JSON object with fields specified in the following table. In the case of failure the answer contains the field "error".
 Name	|Description						|Type		|Mandatory
--------------------------------------------------------------------------------------------
+--------|-------------------------------------------------------|---------------|-------------
 hasCard	|Indicates whether a card is bound.			|Boolean	|No
 email	|User's email address.					|String		|No
 error	|Error text appearing in the case of request failure.	|String		|No
