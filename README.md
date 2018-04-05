@@ -21,7 +21,7 @@ In the recurrent user scenario the user does not have to input card details and 
 ## Composition of Payment Link
 
 The link has this form:
-*http://plugins.miniapps.run/tipay?order.id=<>&order.name=<>&order.amount=<>&receipt.url=<>*
+```http://plugins.miniapps.run/tipay?order.id=<>&order.name=<>&order.amount=<>&receipt.url=<>```
 and comprises parameters indicated in the table below.
 
 |Name 		|Description 									|Type		|Mandatory	|
