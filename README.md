@@ -20,7 +20,6 @@ Sometimes users want to buy content or services online. TiPay plugin facilitates
 
 9. [Getting user information](#getting-user-information). This option is to check if any cards are bound to the user's account and to get the user's email address.
 
-
 ## General Interworking Scenario
 
 The general scenario of interworking of system components and the user is different for a first-time user and a user making recurring purchases. The first-time user scenario includes necessary steps of user registration and setting of payment PIN through a web browser. After that the user receives a payment link and follows it, then interacts with the payment system to make the purchase. If the user's bank card support recurrent payments, TiPay saves the pointer to it, so that the user can make next purchases without the necessity to enter the card details again. Note that the pointer is a hash sum created and shared with TiPay by an external payment system. TiPay does not hold any user data and card details.
