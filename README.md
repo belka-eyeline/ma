@@ -2,15 +2,15 @@
 
 Sometimes users want to buy content or services online. TiPay plugin facilitates incorporation of payment mechanisms into services. The plugin conceals from the service developer a whole lot of routine procedures of JSON TiPay API low-level interworking as well as user registration and setting a payment PIN. From the service developer's perspective the process of payment consists of the following steps, when TiPay is in use:
 
-    1. The service composes a payment link containing the purchase details, using which the user starts the payment process. The link can be associated with a menu item, or a button, when Telegram, Viber, or Facebook messengers are used.
-    2. The service receives a notification of the start of payment transaction meaning that the amount declared in the order is now reserved on the user's account/card. The service developer provides a URL where such notifications should be sent to. The URL should be accessible from TiPay Platform. It is specified in the payment link (see Step 1). If transaction fails, the same URL receives an error notification.
-    3. The user is notified of of the start of payment transaction and the appropriate amount is reserved. Usually service developers prefer to decide how such notification should be presented to the user and what form of wording is to be used. Therefore, TiPay Platform does not notify users independently, but leaves this job to service developers. Notifications are sent by means of Mobilizer Push API.
-    4. The service requests payment status. It may be needed if for some reason the service has not received the notification of the start of payment transaction (see Step 2). The service then requests the transaction status using service order ID.
-    5. Transaction confirmation. After the purchase is completed its final amount (that can be less than that initially declared) becomes known. To finalise the transaction the service should notify the platform by sending a direct HTTP request to the plugin containing the transaction ID and the ultimate amount.
-    6. Transaction rollback. If for some reason the services needs to cancel the transaction, it should make the rollback call.
-    7. The service is notified of transaction completion. This notification is sent to the URL set in the payment link (see Step 1). If the transaction fails, the failure notification will be sent to the same URL.
-    8. The user is notified of payment completion. Again, the service developer takes the job of notifying users, like at the Step 3.
-    9. Getting user information. This option is to check if any cards are bound to the user's account and to get the user's email address.
+1.[The service composes a payment link](#composition-of-payment-link) containing the purchase details, using which the user starts the payment process. The link can be associated with a menu item, or a button, when Telegram, Viber, or Facebook messengers are used.
+2.The service receives a notification of the start of payment transaction meaning that the amount declared in the order is now reserved on the user's account/card. The service developer provides a URL where such notifications should be sent to. The URL should be accessible from TiPay Platform. It is specified in the payment link (see Step 1). If transaction fails, the same URL receives an error notification.
+3. The user is notified of of the start of payment transaction and the appropriate amount is reserved. Usually service developers prefer to decide how such notification should be presented to the user and what form of wording is to be used. Therefore, TiPay Platform does not notify users independently, but leaves this job to service developers. Notifications are sent by means of Mobilizer Push API.
+4. The service requests payment status. It may be needed if for some reason the service has not received the notification of the start of payment transaction (see Step 2). The service then requests the transaction status using service order ID.
+5. Transaction confirmation. After the purchase is completed its final amount (that can be less than that initially declared) becomes known. To finalise the transaction the service should notify the platform by sending a direct HTTP request to the plugin containing the transaction ID and the ultimate amount.
+6. Transaction rollback. If for some reason the services needs to cancel the transaction, it should make the rollback call.
+7. The service is notified of transaction completion. This notification is sent to the URL set in the payment link (see Step 1). If the transaction fails, the failure notification will be sent to the same URL.
+8. The user is notified of payment completion. Again, the service developer takes the job of notifying users, like at the Step 3.
+9. Getting user information. This option is to check if any cards are bound to the user's account and to get the user's email address.
 
 
 ## General Interworking Scenario
