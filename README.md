@@ -1,8 +1,8 @@
 # MiniApps
 ## Contents
-1. [Documentation](#documentation)
-2. [Examples](#examples)
-3. Templates
+[Documentation](#documentation)
+[Examples](#examples)
+Templates
 - Verification MSISDN 
 - TiPay plugin
 - CCC plugin (Chat call-center)
@@ -12,7 +12,7 @@
 - Sender plugin
 - API.AI helper
 - MS QNA helper
-4. [Tools](#tools)
+[Tools](#tools)
 - STT
 - AI plugins
 - Personalization 2
@@ -21,10 +21,10 @@
 - ALS
 - Libs
 
-## 1. Documentation
+## Documentation
 MiniApps.run Documentation: https://docs.miniapps.pro/display/MINIAPPS/
 
-## 2. Examples
+## Examples
 общий текст для примеров  
 Примеры ботов: 
 1. [Крестики-нолики]()
@@ -34,7 +34,7 @@ MiniApps.run Documentation: https://docs.miniapps.pro/display/MINIAPPS/
 5. [Smart bots examples]()
 6. [Sample Google Sheet miniapps]()
 
-## 3. Templates
+## Templates
 
 Общая дока по плагинам
 
@@ -49,7 +49,7 @@ MiniApps.run Documentation: https://docs.miniapps.pro/display/MINIAPPS/
 - [API.AI helper]()
 - [MS QNA helper]()
 
-## 4. Tools
+## Tools
 общие слова про tools
 
 Список tools, выложенных на github
