@@ -28,7 +28,7 @@ MiniApps.run Documentation: https://docs.miniapps.pro/display/MINIAPPS/
 общий текст для примеров  
 Примеры ботов: 
 1. [Крестики-нолики]()
-2. Тестовые боты для проверки шаблонов: [msisdn-verification](), [secret-input](), [languege-selection](),[miniapps-test-bot](), [send-file-demo]()
+2. Тестовые боты для проверки шаблонов: [msisdn-verification](), [secret-input](), [languege-selection](), [miniapps-test-bot](), [send-file-demo]()
 3. [Community bot mamalara.ru]()
 4. [FAQ bot]()
 5. [Smart bots examples]()
