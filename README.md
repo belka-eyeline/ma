@@ -2,7 +2,7 @@
 ## Contents
 1. [Documentation](#documentation)
 2. [Examples](#examples)
-3. Templates
+3. [Templates](#templates)
 - Verification MSISDN 
 - TiPay plugin
 - CCC plugin (Chat call-center)
