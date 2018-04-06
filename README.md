@@ -1,8 +1,8 @@
 # MiniApps
 ## Contents
-[Documentation](#documentation)
-[Examples](#examples)
-Templates
+1. [Documentation](#documentation)
+2. [Examples](#examples)
+3. Templates
 - Verification MSISDN 
 - TiPay plugin
 - CCC plugin (Chat call-center)
@@ -12,7 +12,7 @@ Templates
 - Sender plugin
 - API.AI helper
 - MS QNA helper
-[Tools](#tools)
+4. [Tools](#tools)
 - STT
 - AI plugins
 - Personalization 2
