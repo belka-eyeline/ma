@@ -16,7 +16,7 @@ a. Create the sheet and press the SHARE button in the upper right corner:
 b. Then insert the above shown address in the People entry box and press Send button:
 ![](https://i.imgur.com/X8rP7vb.png)
 
-Then you should open MiniApps Visual Editor and configure your Google Sheets bot (refer to [Constructing Google Sheets Bot](https://github.com/nbelkova/ma/blob/master/README.md#constructing-google-sheets-bot)) and frame an appropriate request that the bot should send to the Google Sheets plugin (refer to [Framing Request to Google Sheets Plugin]()).
+Then you should open MiniApps Visual Editor and configure your Google Sheets bot (refer to [Constructing Google Sheets Bot](#constructing-google-sheets-bot)) and frame an appropriate request that the bot should send to the Google Sheets plugin (refer to [Framing Request to Google Sheets Plugin](#framing-request-to-google-sheets-instruction)).
 
 ## Constructing Google Sheets Bot
 
@@ -53,7 +53,7 @@ If the answer is right, the user scores 1 point, if the answer is wrong - 0 poin
 ![](https://i.imgur.com/Xs2ByBm.png)
 ![](https://i.imgur.com/Yed4RxL.png)
 
-2. Insert the URL that you have configured following the [Framing Request to Google Sheets instruction]().
+2. Insert the URL that you have configured following the [Framing Request to Google Sheets instruction](#framing-request-to-google-sheets-instruction).
 ![](https://i.imgur.com/nwNerHB.png)
 
 3. Switch on Transfer user answers, if you want to use the function.
