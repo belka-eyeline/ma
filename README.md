@@ -105,20 +105,20 @@ For instance, http://plugins.miniapps.run/MiniappsTesterGoogleSheetsBot/?spreads
 Below is the list of the parameters and description of their values, added with possible tasks, to which they are applicable. *For more information on the tasks refer to [Constructing Google Sheets Bot](#constructing-google-sheets-bot).*
 
 Parameter       |Function with which it is passed       |Mandatory      |Tasks           |Value          |
-----------------+---------------------------------------+---------------+----------------+---------------|
+----------------|---------------------------------------|---------------|----------------|---------------|
 spreadsheetId   |/ and /getLast/        |Yes            |see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)  |Google Sheet ID        |
 evaluable	|/                      |No (0 by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)        |Whether or not user's answers should be evaluated(yes, if the user gains a score)      |
-callback	|/ and /getLast/        |No (plugin returns its answer by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)|Callback url (the address the dialog should be forwarded to after the plugin finishes its work)* |
-translationTableTitle                   |/ and /getLast/|No (Translation by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot) |The name of the tab in the table that contains the translation**|
+callback	|/ and /getLast/        |No (plugin returns its answer by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)|Callback url (the address the dialog should be forwarded to after the plugin finishes its work)[1] |
+translationTableTitle                   |/ and /getLast/|No (Translation by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot) |The name of the tab in the table that contains the translation[2]|
 parameters	|/getLast/	        |Yes	        |see [Constructing Google Sheets Bot](#constructing-google-sheets-bot) |Comma separated parameter names that should be given to the user|
 dispatch        |/              	|No (0 by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)        |This parameter determines whether administrators specified in userTableTitle should be notified|
 sendEmail       |/                      |No (0 by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)        |This parameter determines whether administrators should be notified by email (used in conjunction with *dispatch*)
 userTableTitle	|/                      |No (DispatchPhoneList by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)|The name of the tab in the table that contains administrators' data**|
 
-* - callback is entered in the editor like this:
+[1] - callback is entered in the editor like this:
 ![](https://i.imgur.com/Ngi2Y0G.png)
 
-** - you should create a tab, name and format it accordingly in the table that is passed in spreadsheetId:
+[2] - you should create a tab, name and format it accordingly in the table that is passed in spreadsheetId:
 
 - Name: translationTableTitle; This tab contains translation of field names and bot response prefix. Format:
 ![](https://i.imgur.com/B7I1iyu.png)
