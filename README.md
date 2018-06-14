@@ -16,7 +16,7 @@ a. Create the sheet and press the SHARE button in the upper right corner:
 b. Then insert the above shown address in the People entry box and press Send button:
 ![](https://i.imgur.com/X8rP7vb.png)
 
-Then you should open MiniApps Visual Editor and configure your Google Sheets bot (refer to [Constructing Google Sheets Bot]()) and frame an appropriate request that the bot should send to the Google Sheets plugin (refer to [Framing Request to Google Sheets Plugin]()).
+Then you should open MiniApps Visual Editor and configure your Google Sheets bot (refer to [Constructing Google Sheets Bot](https://github.com/nbelkova/ma/blob/master/README.md#constructing-google-sheets-bot)) and frame an appropriate request that the bot should send to the Google Sheets plugin (refer to [Framing Request to Google Sheets Plugin]()).
 
 ## Constructing Google Sheets Bot
 
@@ -27,27 +27,28 @@ This chapter explains how to configure your bot using the Visual Editor to make 
 1. Connection of page names and spreadsheet columns.
 When working with pages in the Visual Editor you can name them by setting their IDs:
 ![](https://i.imgur.com/CoCewNh.png)
+![](https://i.imgur.com/wlm427f.png) ![](https://i.imgur.com/HICDpii.png)
 
 The page ID will be the same as the name of its associated spreadsheet column:
-![](https://i.imgur.com/wlm427f.png)
+![](https://i.imgur.com/cBRLT01.png)
 
-    The information contained in this column cells will be the recorded answers that users give on the associated page.
-    Button IDs in the Visual Editor and their corresponding values in the column, answer evaluation (parameter evaluable 1 - evaluate).
-    Button IDs set in the Visual Editor are recorded to cells of the spreadsheet when these buttons are pushed.
+The information contained in this column cells will be the recorded answers that users give on the associated page.
+2. Button IDs in the Visual Editor and their corresponding values in the column, answer evaluation (parameter evaluable 1 - evaluate).
+Button IDs set in the Visual Editor are recorded to cells of the spreadsheet when these buttons are pushed.
+![](https://i.imgur.com/93zkqLu.png) 
+![](https://i.imgur.com/EocsJss.png)
 
-
-
-
-    If keyboard input is needed (e.g. the user's email), you can set the default target page:
-
-
-
-
-    The answer is evaluated by the button number and the corresponding score:
+3. If keyboard input is needed (e.g. the user's email), you can set the default target page:
+![](https://i.imgur.com/8jvu6Qj.png)
+![](https://i.imgur.com/HTTYSnL.png)
 
 
 
-    If the answer is right, the user scores 1 point, if the answer is wrong - 0 points.
+The answer is evaluated by the button number and the corresponding score:
+
+
+
+If the answer is right, the user scores 1 point, if the answer is wrong - 0 points.
 
     Calling Plugin:
 
