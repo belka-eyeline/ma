@@ -24,12 +24,12 @@ This chapter explains how to configure your bot using the Visual Editor to make 
 
 ### General Information About Visual Editor Configuration
 
-    1. Connection of page names and spreadsheet columns.
+1. Connection of page names and spreadsheet columns.
+When working with pages in the Visual Editor you can name them by setting their IDs:
+![](https://i.imgur.com/KH6uHEc.png)
 
-    When working with pages in the Visual Editor you can name them by setting their IDs:
-    ![](https://i.imgur.com/IMJDrNS.png)
-
-    The page ID will be the same as the name of its associated spreadsheet column:
+The page ID will be the same as the name of its associated spreadsheet column:
+![](https://i.imgur.com/wlm427f.png)
 
     The information contained in this column cells will be the recorded answers that users give on the associated page.
     Button IDs in the Visual Editor and their corresponding values in the column, answer evaluation (parameter evaluable 1 - evaluate).
