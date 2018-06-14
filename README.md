@@ -3,9 +3,9 @@
 
 To enable interworking between a MiniApps bot and Google Sheets whereby the bot uses a Google Sheets document as a database. It should make possible e.g. registration of users and recording their data into the table. The plugin also can:
 
-    - retrieve the last record from the table;
-    - notify administrators by their phone numbers (in Telegram) and email addresses;
-    - localize answers the system gives to users coming from various places.
+- retrieve the last record from the table;
+- notify administrators by their phone numbers (in Telegram) and email addresses;
+- localize answers the system gives to users coming from various places.
 
 ## Usage
 
@@ -26,7 +26,7 @@ This chapter explains how to configure your bot using the Visual Editor to make 
 
 1. Connection of page names and spreadsheet columns.
 When working with pages in the Visual Editor you can name them by setting their IDs:
-![](https://i.imgur.com/KH6uHEc.png)
+![](https://i.imgur.com/CoCewNh.png)
 
 The page ID will be the same as the name of its associated spreadsheet column:
 ![](https://i.imgur.com/wlm427f.png)
