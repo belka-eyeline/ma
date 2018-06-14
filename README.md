@@ -1,62 +1,19 @@
-# KIRIK protocol
-## Contents
-1. [Documentation](#documentation)
-2. [Examples](#examples)
-3. [Templates](#templates)
-- Verification MSISDN 
-- TiPay plugin
-- CCC plugin (Chat call-center)
-- Bitrix24 plugin
-- VK plugin
-- Google calendar plugin
-- Sender plugin
-- API.AI helper
-- MS QNA helper
-4. [Tools](#tools)
-- STT
-- AI plugins
-- Personalization 2
-- SAA 2.0
-- IPS
-- ALS
-- Libs
+# Google Sheets Plugin
+## Goal
 
-## Documentation
-MiniApps.run Documentation: https://docs.miniapps.pro/display/MINIAPPS/
+To enable interworking between a MiniApps bot and Google Sheets whereby the bot uses a Google Sheets document as a database. It should make possible e.g. registration of users and recording their data into the table. The plugin also can:
 
-## Examples
-общий текст для примеров  
-Примеры ботов: 
-1. [Крестики-нолики]()
-2. Тестовые боты для проверки шаблонов: [msisdn-verification](), [secret-input](), [languege-selection](), [miniapps-test-bot](), [send-file-demo]()
-3. [Community bot mamalara.ru]()
-4. [FAQ bot]()
-5. [Smart bots examples]()
-6. [Sample Google Sheet miniapps]()
+    - retrieve the last record from the table;
+    - notify administrators by their phone numbers (in Telegram) and email addresses;
+    - localize answers the system gives to users coming from various places.
 
-## Templates
+## Usage
 
-Общая дока по плагинам
+To enable interworking between the plugin and your Google Sheet document allow miniapps@miniappstesterbot.iam.gserviceaccount.com to edit it. To do it:
 
-Список плагинов, выложенных на github:
-- [Verification MSISDN]()
-- [TiPay plugin]()
-- [CCC plugin (Chat call-center)]()
-- [Bitrix24 plugin]()
-- [VK plugin]()
-- [Google calendar plugin]()
-- [Sender plugin]()
-- [API.AI helper]()
-- [MS QNA helper]()
+a. Create the sheet and press the SHARE button in the upper right corner:
+![](https://i.imgur.com/lEjAFXd.png)
+b. Then insert the above shown address in the People entry box and press Send button:
+![](https://i.imgur.com/X8rP7vb.png)
 
-## Tools
-общие слова про tools
-
-Список tools, выложенных на github
-- [STT]()
-- [AI plugins]()
-- [Personalization 2]()
-- [SAA 2.0]()
-- [IPS]()
-- [ALS]()
-- [Libs]()
+Then you should open MiniApps Visual Editor and configure your Google Sheets bot (refer to [Constructing Google Sheets Bot]()) and frame an appropriate request that the bot should send to the Google Sheets plugin (refer to [Framing Request to Google Sheets Plugin]()).
