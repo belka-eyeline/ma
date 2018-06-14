@@ -24,7 +24,7 @@ This chapter explains how to configure your bot using the Visual Editor to make 
 
 ### General Information About Visual Editor Configuration
 
-1. Connection of page names and spreadsheet columns.
+* Connection of page names and spreadsheet columns.
 When working with pages in the Visual Editor you can name them by setting their IDs:
 ![](https://i.imgur.com/CoCewNh.png)
 ![](https://i.imgur.com/wlm427f.png) ![](https://i.imgur.com/HICDpii.png)
@@ -33,40 +33,37 @@ The page ID will be the same as the name of its associated spreadsheet column:
 ![](https://i.imgur.com/cBRLT01.png)
 
 The information contained in this column cells will be the recorded answers that users give on the associated page.
-2. Button IDs in the Visual Editor and their corresponding values in the column, answer evaluation (parameter evaluable 1 - evaluate).
+* Button IDs in the Visual Editor and their corresponding values in the column, answer evaluation (parameter evaluable 1 - evaluate).
 Button IDs set in the Visual Editor are recorded to cells of the spreadsheet when these buttons are pushed.
 ![](https://i.imgur.com/93zkqLu.png) 
 ![](https://i.imgur.com/EocsJss.png)
 
-3. If keyboard input is needed (e.g. the user's email), you can set the default target page:
+* If keyboard input is needed (e.g. the user's email), you can set the default target page:
 ![](https://i.imgur.com/8jvu6Qj.png)
 ![](https://i.imgur.com/HTTYSnL.png)
 
-
-
 The answer is evaluated by the button number and the corresponding score:
-
-
+![](https://i.imgur.com/VlALsut.png)
 
 If the answer is right, the user scores 1 point, if the answer is wrong - 0 points.
 
-    Calling Plugin:
+* Calling Plugin:
 
-        Create a page and change its type to External Service.
+1. Create a page and change its type to External Service.
+![](https://i.imgur.com/Xs2ByBm.png)
+![](https://i.imgur.com/Yed4RxL.png)
 
+2. Insert the URL that you have configured following the [Framing Request to Google Sheets instruction]().
+![](https://i.imgur.com/nwNerHB.png)
 
+3. Switch on Transfer user answers, if you want to use the function.
 
+4. If needed, add the callback parameter and name it "callback":
+![](https://i.imgur.com/xEt0sEA.png)
+![](https://i.imgur.com/VWoEIRh.png)
 
-        Insert the URL that you have configured following the Framing Request to Google Sheets instruction.
-
-
-
-        Switch on Transfer user answers, if you want to use the function /
-
-        If needed, add the callback parameter and name it "callback":
-
-
-
-
-
-        Choose the page which callback should lead to:
+5. Choose the page which callback should lead to:
+![](https://i.imgur.com/owTVsKP.png)
+![](https://i.imgur.com/5JNxJeT.png)
+        
+ ## Framing Request to Google Sheets instruction
