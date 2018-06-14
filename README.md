@@ -67,3 +67,63 @@ If the answer is right, the user scores 1 point, if the answer is wrong - 0 poin
 ![](https://i.imgur.com/5JNxJeT.png)
         
  ## Framing Request to Google Sheets instruction
+
+First thing to do is to form the main part of the request. To do it you need the ID of your Google Sheet:
+
+1. Copy the sheet address from the browser:
+![](https://i.imgur.com/HytWfPz.png)
+
+2. Select the part in the middle of the address flanked by "/" on both sides, like this: https://docs.google.com/spreadsheets/d/**1GCXT5ii2NJxok6hpnjAXp3RQd6H_9TQs4pkKB6PDbZc**/edit?pli=1#gid=2147. This is the ID. Copy it.
+
+The plugin has two main functions:
+* Add a row to the sheet (its address is simply /)
+* Retrieve the last row belonging to a particular user (its address is /**getLast**/)
+
+Choose the function that you need and place its address instead of <function_address> in 
+```
+http://plugins.miniapps.run/MiniappsTesterGoogleSheetsBot<function_address> 
+```
+Add the sheet ID to: 
+```
+http://plugins.miniapps.run/MiniappsTesterGoogleSheetsBot<function_address>?spreadsheetId=
+```
+
+Which will result in an address line of this kind: 
+```
+http://plugins.miniapps.run/MiniappsTesterGoogleSheetsBot/?spreadsheetId=1GCXT5ii2NJxok6hpnjAXp3RQd6H_9TQs4pkKB6PDbZc
+```
+
+The next steps depend on your desired result. You can add a parameter:
+```
+&<parameter_name>=<parameter_value>,
+```
+
+where <parameter_name> – is the name of the parameter, and <parameter_value> is its value.
+
+For instance, http://plugins.miniapps.run/MiniappsTesterGoogleSheetsBot/?spreadsheetId=1GCXT5ii2NJxok6hpnjAXp3RQd6H_9TQs4pkKB6PDbZc&evaluable=0&dispatch=1&sendEmail=1
+
+Below is the list of the parameters and description of their values, added with possible tasks, to which they are applicable. *For more information on the tasks refer to [Constructing Google Sheets Bot](#constructing-google-sheets-bot).*
+
+Parameter       |Function with which it is passed       |Mandatory      |Tasks           |Value          |
+----------------+---------------------------------------+---------------+----------------+---------------|
+spreadsheetId   |/ and /getLast/        |Yes            |see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)  |Google Sheet ID        |
+evaluable	|/                      |No (0 by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)        |Whether or not user's answers should be evaluated(yes, if the user gains a score)      |
+callback	|/ and /getLast/        |No (plugin returns its answer by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)|Callback url (the address the dialog should be forwarded to after the plugin finishes its work)* |
+translationTableTitle                   |/ and /getLast/|No (Translation by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot) |The name of the tab in the table that contains the translation**|
+parameters	|/getLast/	        |Yes	        |see [Constructing Google Sheets Bot](#constructing-google-sheets-bot) |Comma separated parameter names that should be given to the user|
+dispatch        |/              	|No (0 by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)        |This parameter determines whether administrators specified in userTableTitle should be notified|
+sendEmail       |/                      |No (0 by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)        |This parameter determines whether administrators should be notified by email (used in conjunction with *dispatch*)
+userTableTitle	|/                      |No (DispatchPhoneList by default)|see [Constructing Google Sheets Bot](#constructing-google-sheets-bot)|The name of the tab in the table that contains administrators' data**|
+
+* - callback is entered in the editor like this:
+![](https://i.imgur.com/Ngi2Y0G.png)
+
+** - you should create a tab, name and format it accordingly in the table that is passed in spreadsheetId:
+
+- Name: translationTableTitle; This tab contains translation of field names and bot response prefix. Format:
+![](https://i.imgur.com/B7I1iyu.png)
+(prefix – the standard parameter setting the beginning of the bot response. The rest is the parameters from the table. en and ru - language codes).
+
+- Name: userTableTitle; This tab contains the administrators' data. Format:
+![](https://i.imgur.com/E5OWaI3.png)
+
