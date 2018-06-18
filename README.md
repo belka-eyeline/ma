@@ -12,6 +12,7 @@ Click on **Connect Chat Call Centre** and enter the operator's phone number in t
 ![](https://i.imgur.com/sr1vDUd.png)
 
 Click **Connect**. The CCC is now connected:
+
 ![](https://i.imgur.com/LHpxGda.png)
 
 ## Using ССС
