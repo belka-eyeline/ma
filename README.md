@@ -44,4 +44,4 @@ Here you can add an operator by clicking on the **Add operator** button and ente
 
 ## Authorising Operators
 
-Operators connect to CCC entering the command **Login operator** and disconnect entering the **Logout operator** command. The same as the administrator, an operator should pass the phone number verification procedure. But, prior to that the operator should be added to the system by the administrator (see above). Then the operator works the same way as the administrator in the operator mode.
+Operators connect to CCC entering the command **Login operator** and disconnect entering the **Logout operator** command. The same as the administrator, an operator should pass the phone number verification procedure. But, prior to that the operator should be added to the system by the administrator (see above). Then the operator works the same way as the administrator in the [operator mode](#operator-mode).
